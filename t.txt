@@ -1,6 +1,6 @@
 Let's try to printf a simple sentence.
-Length:[%d, %i]
-Negative:[%d]
+Length:[39, 39]
+Negative:[-762534]
 Unsigned:[%u]
 Unsigned octal:[%o]
 Unsigned hexadecimal:[%x, %X]
@@ -8,7 +8,7 @@ Character:[H]
 String:[I am a string !]
 Address:[%p]
 Percent:[%]
-Len:[%d]
+Len:[12]
 Unknown:[%r]
 Let's try to printf a simple sentence.
 Length:[39, 39]

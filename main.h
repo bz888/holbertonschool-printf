@@ -8,6 +8,7 @@ int _printf(const char *format, ...);
 int _putchar(char c);
 int _puts(char *s);
 int handle_specifier(char spec, va_list args);
+int print_int(int n);
 
 #endif
 

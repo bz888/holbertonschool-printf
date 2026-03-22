@@ -46,6 +46,7 @@ int handle_specifier(char spec, va_list args)
 {
 	char c;
 	char *s;
+	int n;
 
 	if (spec == 'c')
 	{
@@ -62,6 +63,40 @@ int handle_specifier(char spec, va_list args)
 	if (spec == '%')
 		return (_putchar('%'));
 
+	if (spec == 'd' || spec == 'i')
+	{
+		n = va_arg(args, int);
+		return (print_int(n));
+	}
+
 	return (_putchar('%') + _putchar(spec));
+}
+
+/**
+ * print_int - prints an integer
+ * @n: integer to print
+ *
+ * Return: number of characters printed
+ */
+int print_int(int n)
+{
+	long num;
+	int count;
+
+	num = n;
+	count = 0;
+
+	if (num < 0)
+	{
+		count += _putchar('-');
+		num = -num;
+	}
+
+	if (num / 10 != 0)
+		count += print_int(num / 10);
+
+	count += _putchar((num % 10) + '0');
+
+	return (count);
 }
 
